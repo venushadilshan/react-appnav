@@ -1,0 +1,35 @@
+::root{
+  --navBarHeight:20vh;
+  --navBaseColor:#32323C;
+}
+
+
+
+.page-container
+{
+  display: flex;
+ 
+  height: 92vh;
+}
+
+
+.navbar
+{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  background-color: #32323C;
+  position: fixed;
+}
+
+.nav-icon:hover
+{
+  fill: #24ACFB;
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    
+}
