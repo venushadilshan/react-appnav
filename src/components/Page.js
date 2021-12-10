@@ -1,16 +1,36 @@
 import React from "react";
 
-export default function Page() {
-    return (
-        <div className="page-container">
-         In these examples we use a 600 pixels high container, with the flex-wrap property set to wrap, to better demonstrate the align-content property.
+export default function Page(props) {
 
-ExampleIn these examples we use a 600 pixels high container, with the flex-wrap property set to wrap, to better demonstrate the align-content property.
+    //load pages here as components. check App.css to set the height of parent
 
-ExampleIn these examples we use a 600 pixels high container, with the flex-wrap property set to wrap, to better demonstrate the align-content property.
-
-
-Example
+    if (props.currentPage == "home") {
+        return (<div className="page-container">
+            <h1>Home</h1>
         </div>
-    );
+        )
+    }
+
+    else if (props.currentPage == "user") {
+        return (<div className="page-container">
+            <h1>User</h1>
+        </div>
+        )
+    }
+
+    else if (props.currentPage == "stats") {
+        return (<div className="page-container">
+            <h1>Stats</h1>
+        </div>
+        )
+    }
+
+    else if (props.currentPage == "settings") {
+        return (<div className="page-container">
+            <h1>Settings</h1>
+        </div>
+        )
+    }
+
+
 }

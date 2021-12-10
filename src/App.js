@@ -7,12 +7,14 @@ import Page from './components/Page';
 function App() {
   const [currentTab, setCurrentTab] = useState("home")
 
- 
+
+
   return (
-   
+
     <>
-    <Page/>
-      <NavBar currentTab={currentTab} changeTab={(tabName)=>{ setCurrentTab(tabName); console.log(tabName)}} />
+
+      <Page currentPage={currentTab} />
+      <NavBar currentTab={currentTab} changeTab={(tabName) => { setCurrentTab(tabName); console.log(tabName) }} />
     </>
   );
 }

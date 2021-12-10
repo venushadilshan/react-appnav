@@ -25,6 +25,7 @@
   width: 100%;
   background-color: #32323C;
   position: fixed;
+  transition: all 0.5s;
 }
 
 
@@ -33,6 +34,7 @@
 {
 
   filter: invert(40%) sepia(99%) saturate(586%) hue-rotate(153deg) brightness(103%) contrast(103%) ;
+  transition: all 0.5s;
  
 }
 

@@ -9,47 +9,64 @@ import NavBtn from "./NavBtn";
 export default function NavBar(props) {
     const [homeBtnStatus, setHomeBtnStatus] = useState("nav-icon");
     const [userBtnStatus, setuserBtnStatus] = useState("nav-icon");
-     
-    const changeBtn=(id)=>{
-       // clearActive()
-        if(id=="btnHome")
-        {
+    const [statBtnStatus, setstatBtnStatus] = useState("nav-icon");
+    const [settingBtnStatus, setsettingBtnStatus] = useState("nav-icon");
+
+    const changeBtn = (id) => {
+        // toggle button status
+        if (id == "btnHome") {
             setHomeBtnStatus("nav-icon-active")
             props.changeTab("home")
+
             setuserBtnStatus("nav-icon")
-            
-           
+
+            setstatBtnStatus("nav-icon")
+
         }
-        else if(id=="btnUser")
-        {
+        else if (id == "btnUser") {
             setuserBtnStatus("nav-icon-active")
-            setHomeBtnStatus("nav-icon")
+
             props.changeTab("user")
-        
-           
+
+            setHomeBtnStatus("nav-icon")
+            setstatBtnStatus("nav-icon")
+            setsettingBtnStatus("nav-icon")
+
+        }
+
+        else if (id == "btnStats") {
+            setstatBtnStatus("nav-icon-active")
+
+            props.changeTab("stats")
+
+            setHomeBtnStatus("nav-icon")
+            setuserBtnStatus("nav-icon")
+            setsettingBtnStatus("nav-icon")
+
+        }
+
+        else if (id == "btnSettings") {
+            setsettingBtnStatus("nav-icon-active")
+
+            props.changeTab("settings")
+
+            setHomeBtnStatus("nav-icon")
+            setstatBtnStatus("nav-icon")
+            setuserBtnStatus("nav-icon")
+
         }
     }
 
-    const clearActive=()=>{
-        if(props.currentTab=="home")
-        {
-            setuserBtnStatus("nav-icon")
-        }
-        else if (props.currentTab=="user")
-        {
-            setHomeBtnStatus("nav-icon")
-        }
-    }
-   
+
 
     return (
 
         <div className="navbar" >
 
-            <NavBtn icon={iconHome} id="btnHome" toggleStatus={homeBtnStatus} changeTab={props.changeTab} currentTab={props.currentTab} changeBtn={(id)=>changeBtn(id)}/>
-            <NavBtn icon={iconUser} id="btnUser" toggleStatus={userBtnStatus} changeTab={props.changeTab} currentTab={props.currentTab} changeBtn={(id)=>changeBtn(id)}/>
-            <NavBtn icon={iconStats} id="btnStats" toggleStatus={false} changeTab={props.changeTab} currentTab={props.currentTab} />
-            <NavBtn icon={iconSettings} id="btnSettings" toggleStatus={false} changeTab={props.changeTab} currentTab={props.currentTab} />
+            <NavBtn icon={iconHome} id="btnHome" toggleStatus={homeBtnStatus} changeTab={props.changeTab} currentTab={props.currentTab} changeBtn={(id) => changeBtn(id)} />
+            <NavBtn icon={iconUser} id="btnUser" toggleStatus={userBtnStatus} changeTab={props.changeTab} currentTab={props.currentTab} changeBtn={(id) => changeBtn(id)} />
+            <NavBtn icon={iconStats} id="btnStats" toggleStatus={statBtnStatus} changeTab={props.changeTab} currentTab={props.currentTab} changeBtn={(id) => changeBtn(id)} />
+            <NavBtn icon={iconSettings} id="btnSettings" toggleStatus={settingBtnStatus} changeTab={props.changeTab} currentTab={props.currentTab} changeBtn={(id) => changeBtn(id)} />
 
         </div>
 
