@@ -27,9 +27,12 @@
   position: fixed;
 }
 
-.nav-icon:hover
+
+
+.nav-icon-active
 {
-  fill: #24ACFB;
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
-    
+
+  filter: invert(40%) sepia(99%) saturate(586%) hue-rotate(153deg) brightness(103%) contrast(103%) ;
+ 
 }
+
