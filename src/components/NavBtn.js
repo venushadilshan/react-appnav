@@ -6,6 +6,8 @@ export default function NavBtn(props) {
 
     const [BtnToggle, setBtnToggle] = useState("nav-icon")
 
+    
+
     const toggleBtn = () => {
         props.changeBtn();
        
@@ -30,8 +32,9 @@ export default function NavBtn(props) {
 
     return (
 
-
+ 
         <img src={props.icon} className={props.toggleStatus}
-            id={props.id} onClick={() => toggleBtn()} />
+            id={props.id} onClick={() => props.changeBtn(props.id)} />
+          
     )
 }
