@@ -14,7 +14,7 @@ function App() {
     <>
 
       <Page currentPage={currentTab} />
-      <NavBar currentTab={currentTab} changeTab={(tabName) => { setCurrentTab(tabName); console.log(tabName) }} />
+      <NavBar currentTab={currentTab} changeTab={(tabName) => { setCurrentTab(tabName); console.log("Current Page: " + tabName) }} />
     </>
   );
 }

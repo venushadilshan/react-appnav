@@ -12,6 +12,12 @@ export default function NavBar(props) {
     const [statBtnStatus, setstatBtnStatus] = useState("nav-icon");
     const [settingBtnStatus, setsettingBtnStatus] = useState("nav-icon");
 
+
+    useEffect(()=>{
+
+        setHomeBtnStatus("nav-icon-active");
+
+    },[]);
     const changeBtn = (id) => {
         // toggle button status
         if (id == "btnHome") {
@@ -21,6 +27,7 @@ export default function NavBar(props) {
             setuserBtnStatus("nav-icon")
 
             setstatBtnStatus("nav-icon")
+            setsettingBtnStatus("nav-icon")
 
         }
         else if (id == "btnUser") {

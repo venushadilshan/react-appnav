@@ -1,4 +1,8 @@
 import React from "react";
+import Home from "./Pages/Home";
+import Settings from "./Pages/Settings";
+import Stats from "./Pages/Stats";
+import User from "./Pages/User";
 
 export default function Page(props) {
 
@@ -6,28 +10,28 @@ export default function Page(props) {
 
     if (props.currentPage == "home") {
         return (<div className="page-container">
-            <h1>Home</h1>
+           <Home/>
         </div>
         )
     }
 
     else if (props.currentPage == "user") {
         return (<div className="page-container">
-            <h1>User</h1>
+            <User/>
         </div>
         )
     }
 
     else if (props.currentPage == "stats") {
         return (<div className="page-container">
-            <h1>Stats</h1>
+            <Stats/>
         </div>
         )
     }
 
     else if (props.currentPage == "settings") {
         return (<div className="page-container">
-            <h1>Settings</h1>
+            <Settings/>
         </div>
         )
     }
