@@ -5,6 +5,7 @@
 ## Made with React,
 
 - useState Hook
+- useEffect Hook
 
 
 ## How to use?
